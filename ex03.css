@@ -1,0 +1,7 @@
+@charset "utf-8";
+
+#main{background-color: lightgray;}
+#main > h2{color: gold;}
+#maic span{font-size: 25px;}
+#main > h2:hover + div h2{color:skyblue}
+#main > div > div > span:first-child:hover ~ span:last-child{background-color: red;}
