@@ -1,0 +1,32 @@
+@charset "utf-8";
+
+#div1, #div2, #div3, #div4{width: 200px;height: 200px;}
+#div1{border: 3px solid #000;}
+
+#div2{border: 3px double green;}
+
+#div3{border: 3px dotted red;border-radius: 20px;}
+
+#div4{border: 3px dashed lawngreen;border-radius: 200px;overflow: hidden;}
+
+a.click{color: #000;text-decoration: none;}
+a.click:hover{
+    border-bottom:3px solid #ff00ff;
+}
+#div5{width: 100px;height: 100px;background-color: aquamarine;overflow: auto;}
+
+#div6{width: 200px;height: 500px;border: 1px solid gray;border-radius: 5px;}
+#div6 div{overflow: hidden;width: 200px;height: 200px;}
+#div6 div img{width: 200px;height: 200px;
+    &:hover{transform: scale(1.1);transition: all 0.5s;}
+}
+
+#wrap{width: 200px;}
+#wrap #logo{width: 200px;height: 200px;overflow: hidden;border-radius: 100%;}
+#wrap #logo img{display: block;width: 100%;height: 100%;&:hover{transform: scale(1.1);transition: all 0.5s;}}
+#wrap .item{height: 300px;border: 2px solid #ddd;border-radius: 5px;}
+#wrap .item > div:first-child{width: 100%;height: 200px;overflow: hidden;}
+#wrap .item > div:first-child img{display: block;width: 100%;height: 100%;&:hover{transform: scale(1.1);transition: all 0.5s;}}
+#wrap .item > div a{text-decoration: none;color: #000;&:hover{color: red;}}
+#wrap .item > div:last-child{text-align: right;color: blue;padding-top: 50px;}
+#wrap button{display: inline-block;border: none;border-radius: 30px;padding: 3px 8px;margin-top: 3px;background-color: #909090;color:#fff;&:hover{background-color:#000}}
