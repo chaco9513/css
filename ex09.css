@@ -1,0 +1,35 @@
+@charset "utf-8";
+
+#div1{width: 300px;background: gray;display: flex;}
+#div1 div{width:100px;}
+#div1 :nth-of-type(1){background-color: aqua;order: 3;}
+#div1 :nth-of-type(2){background-color: blue;order: 2;}
+#div1 :nth-of-type(3){background-color: brown;order: 1;}
+
+#div2{display: flex; width: 300px;border: 1px solid ;}
+#div2 > div {display: flex;width: 150px;border: 1px solid greenyellow;}
+
+.quiz01{width: 500px;}
+.quiz01 > div:nth-child(1){width: 100%;height: 50px;background-color: red;}
+.quiz01 > div:nth-child(2){display: flex;height: 200px;}
+.quiz01 > div:nth-child(2) > div:first-child{width: 30%;background-color: yellow;}
+.quiz01 > div:nth-child(2) > div:last-child{width: 70%;background-color: green;}
+.quiz01 > div:nth-child(3){height: 50px;background-color: pink;}
+
+.quiz02{width: 500px;margin-top: 20px;}
+.quiz02 > div:nth-child(1){width: 100%;height: 50px;background-color: red;}
+.quiz02 > div:nth-child(2){display: flex;height: 200px;}
+.quiz02 > div:nth-child(2) > div:first-child{width: 10%;background-color: yellow;}
+.quiz02 > div:nth-child(2) > div:nth-child(2){width: 60%;background-color: green;}
+.quiz02 > div:nth-child(2) > div:last-child{width: 30%;background-color: yellow;}
+.quiz02 > div:nth-child(3){height: 50px;background-color: pink;}
+
+.quiz03{width: 500px;margin-top: 20px;}
+.quiz03 > div:nth-child(1){width: 100%;height: 50px;background-color: red;}
+.quiz03 > div:nth-child(2){display: flex;height: 200px;}
+.quiz03 > div:nth-child(2) > div:nth-child(1){width: 10%;background-color: yellow;}
+.quiz03 > div:nth-child(2) > div:nth-child(2){width: 60%;background-color: green;display: flex;align-items: center;justify-content: space-around;flex-direction: column;}
+.quiz03 > div:nth-child(2) > div:nth-child(2) > div{width: 80%;height: 30px;background-color: #fff;}
+.quiz03 > div:nth-child(2) > div:nth-child(3){width: 30%;background-color: yellow;}
+
+.quiz03 > div:nth-child(3){height: 50px;background-color: pink;}
