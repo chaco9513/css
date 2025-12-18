@@ -1,0 +1,10 @@
+@charset "utf-8";
+
+#div1{width: 200px;height: 200px;background-image: url(img01.png);}
+#div1:hover{background-image: url(talent00.png);color: red;}
+#div1 div{width: 30px;height: 30px;}
+
+.quiz01{width: 1200px;height: 200px;display: flex;gap: 0 30px;background-color: #ddd;}
+.quiz01 div{width: 20%;background-image: url(img01.png);text-align: center;padding-top: 100px;&:hover{background-image: url(talent00.png);};background-size: cover;}
+.quiz01 div span{color: #000;background-color: #fff;display: inline-block;padding: 10px;}
+.quiz01 div:hover span{background: #000;color: #fff;}
