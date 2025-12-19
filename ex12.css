@@ -1,0 +1,60 @@
+@charset "utf-8";
+
+#wrap{width: 300px;height: 800px;background-color: green;
+    /* #wrap을 아래 위 300px 마진주고 가운데 정렬 */
+    margin: 300px auto;
+}
+
+#wrap > div{width: 100px;height: 100px;}
+#wrap > div > div{width: 50px;height: 50px;background-color: aqua;}
+
+/* position 속성을 사용하지 않으면 top,left,right,bottom은 효과없음 */
+/* 부모 태그에 position 속성을 사용하더라도 자식 태그들을 옮기기 위해서는 자식 태그에도 position속성을 따로 추가해야한다 */
+#relative{background-color: red;
+    /* relative : 부모 태그 안에서 본인 기준으로 이동되어 자리함  */
+    position: relative;
+    top: 300px;left: 50px;
+    & > div{top: 10px;left: 10px;
+        /* absolute 속성을 그냥 사용하면 화면 전체 영역에서 이동되지만 부모 태그가 relative 속성을 가지고 있으면 부모 기준으로 이동됨 */
+        position: absolute;
+    }
+}
+
+#absolute{background-color: gold;
+    /* absolute : 화면 전체 영역에서 이동되어 자리함 */
+    position:absolute;
+    top: 300px;right: 50px;
+}
+
+
+#fixed{background-color: navy;
+    /* fixed : 브라우저 영역에서 이동되며 스크롤이 변동이 되어도 고정 */
+    /* fixed는 어디에 사용되도 부모와 상관없이 브라우저 기준으로 이동 */
+    position: fixed;
+    top: 300px;left: 50px;
+    & > div{top: 300px;left: 10px;
+        /* inherit : 부모 속성을 같이 사용하겠다는 명령어 (xe. 부모가 fixed 본인도 fixed 받아짐 */
+        position: inherit;
+    }
+}
+
+
+/* z-index : 우선 순위 지정 , 숫자가 높을 수록 맨 위에 위치함 */
+#static2, #relative2, #absolute2, #fixed2{width: 100px;height: 100px;}
+#static2{background-color: rebeccapurple;z-index: 1;}
+#relative2{background-color: gray;position: relative;top: -75px;left: 25px;
+z-index: 2;}
+#absolute2{background-color: aqua;position: absolute; top: 50px;left: 50px;
+z-index: 99;}
+#fixed2{background-color: burlywood;position: fixed;top: 75px;left: 75px;
+z-index: 5;}
+
+/* position을 사용 시 다른 태그 위에 위치가 될 수 있음 */
+#modal{
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.1);
+    top: 0;
+    right: 0;
+}
+/* #modal이 a태그 위에 올라가기 때문에 a태그 클릭이 되지 않음 -> z-index로 #modal 위로 오게끔 수정 */
+a{position: absolute;right:0;z-index: 10;}
