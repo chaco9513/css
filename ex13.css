@@ -1,0 +1,18 @@
+@charset "utf-8";
+
+#nav{width: 400px;background-color: gold;}
+#menu{background-color: green;}
+/* 2번째 메뉴(menu1)는 처음에 숨겨져 있게 height:0 으로 설정, 천천히 높이가 늘어나는 효과를 위해 transition 추가*/
+.menu1{background-color: skyblue;height: 0;overflow: hidden;transition: 1s;}
+/* menu에 hover 시 2번째 메뉴의 높이를 120px로 늘리게 설정  */
+#menu > li:hover .menu1{height: 120px;}
+ul{margin: 0;padding: 0;}
+li{width: 100px;list-style: none;text-align: center;height: 40px;line-height: 40px;}
+
+#div1{width: 100px;height: 100px;background-color: gold;
+    /* hover 시 바뀌는 아이템들 1s(1초)동안 천천히 바뀌게 하는 명령어 */
+    transition:1s;
+    /* transition-delay는 기다렸다가(delay) 작동하라는 명령어 */
+    transition-delay: 1s;
+}
+#div1:hover{width: 300px;background-color: red;}
