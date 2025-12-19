@@ -1,0 +1,58 @@
+@charset "utf-8";
+
+#div1, #div2, #div3{width: 200px;height: 200px;
+    background-image: url(img01.png);
+    /* background-image를 정해진 width, height에 맞춰서 채우는 방법 */
+    background-size: cover;
+}
+
+#div1{
+    margin: 200px;
+    /* rotate : 각도 조절 5도 */
+    transform: rotate(5deg);
+}
+#div2{
+    margin-top: -300px;
+    margin-left: 300px;
+    transform: rotate(-5deg);
+    transition: 1s;
+}
+/* hover 시 1420도 돌리기 */
+#div2:hover{transform: rotate(1420deg);}
+
+#div3{
+    margin: 100px;
+    transition: 1s;
+    &:hover{
+        /* scale : 확대 (2배로) , scaleX() : 가로로 확대 , scaleY() : 세로로 확대*/
+        transform: scale(2);
+    }
+}
+
+
+#div4,#div5{
+    width: 150px;height: 150px;background-color: gray;border: 10px solid red;margin-left: 200px;
+    & img{width: 150px;height: 150px;}
+}
+/* width,height로 늘어나게 하면 왼쪽 모서리를 시작으로 늘어남 */
+#div4 img:hover{
+    width: 180px;height: 180px;
+}
+/* transform 사용하면 중앙부터 늘어남 */
+#div5 img:hover{
+    transform: scale(1.5);
+}
+
+#div6,#div7{
+    width: 150px;height: 150px;background-color: green;
+    transition: 3s;
+}
+/* hover 시 왼쪽으로부터 400px이동, div6에 마우스 올려져야만 이동 */
+#div6:hover{margin-left: 400px;}
+/* 한번 hover해도 transform은 작동 */
+#div7:hover{transform: translateX(400px);}
+
+#div8{width: 150px;height: 150px;background-color: gold;transition: 3s;
+    /* transform은 여러개 같이 사용 가능하며 콤마(,)없이 한칸 띄워서 사용 */
+    &:hover{transform: translateX(400px) rotate(360deg);}
+}

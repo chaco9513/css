@@ -1,0 +1,18 @@
+@charset "urf-8";
+
+ul{margin: 0;padding: 0;}
+li{list-style: none;width: 100px;text-align: center;height: 40px;line-height:40px;}
+
+#nav{width: 400px;background-color: cadetblue;}
+#menu{display: flex;}
+.menu1{
+     border-radius: 15px;
+    /* 방법1 : display를 none으로 했다가 block으로 바꾸기 */
+    /*display: none;height: 120px;border: 1px solid;*/
+    /* 방법2 : height를 0으로 했다가 높이주기 */
+    height: 0;overflow: hidden;
+   }
+   /* 방법1일때 사용 */
+/* #menu li:hover .menu1{display: block;} */
+/* 방법2일때 사용 */
+#menu li:hover .menu1{height: 120px;border:1px solid}

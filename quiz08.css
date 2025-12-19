@@ -1,0 +1,22 @@
+@charset "utf-8";
+
+/* 전체 감싸는 div1에 크기 및 틀 정하기 */
+#div1{width: 200px;height: 200px;border-radius: 50%;overflow: hidden;}
+/* img 태그에 transform을 사용함에 시간 설정을 위해 transition 2초로 설정 */
+img{width: 200px;height: 200px;transition: 2s;}
+/* div1에 hover시 img 2배 커지기, 360도 회전 */
+#div1:hover > img{transform: scale(2) rotate(360deg);}
+
+#div2{
+    color: #fff;
+    font-size: 25px;
+    /* div1의 중간에 위치해야하기에 width값 동일하게 200px */
+    width: 200px;
+    text-align: center;
+    /* 마이너스를 주면 위로 margin이 위로 당겨지는 효과 */
+    margin-top: -100px;
+    /* margin-top의 위치이동과 글자색을 바꾸기 위해 시간 설정 */
+    transition: 0.5s;
+}
+/* div1에 hover할 때 div2의 margin-top을 0으로 바꾸어 원래 위치로 이동시킴 */
+#div1:hover + #div2{margin-top: 0;color:blue}
