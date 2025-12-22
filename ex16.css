@@ -1,0 +1,36 @@
+@charset "urf-8";
+
+*{margin: 0;padding: 0;box-sizing: border-box;}
+#header_wrap{width: 100%;background-color: brown;position: fixed;top: 0;}
+#header{width: 700px;height: 100px;display: flex;margin: 0 auto;}
+#title_logo{width: 100px;border-radius: 100%;background-image: url(img01.png);background-size: cover;}
+#title_logo > div{color:white;margin-top: 25px;text-align: center;animation:title 0.8s infinite;}
+@keyframes title {
+    25%{color:aqua}    
+    50%{color:rgb(122, 100, 19)}    
+    75%{color:rgb(151, 54, 158)}    
+}
+#nav{display: flex;justify-content: space-between;width: 600px;background-color: brown;}
+#nav ul{list-style: none;display: flex;align-items: center;}
+#nav ul li{margin: 0 10px;}
+#nav ul li a{text-decoration: none;color: white;font-size: 20px;&:hover{color: orange;border-bottom: 2px solid orange;padding-bottom: 5px;transition: 0.25s;}}
+#nav ul + ul li a{font-size: 13px;color: lightgray;}
+
+#main{width: 700px;margin: 100px auto;}
+#section_1{display: flex;flex-wrap: wrap;}
+#section_1 > div{border: 1px solid gray;width: 152.5px;border-radius: 10px;height: 200px;margin-top: 20px;margin-right: 30px;&:nth-of-type(4n){margin-right: 0;}}
+#section_1 > div:nth-of-type(1) .img{width: 130px;height: 130px;background-image: url(talent00.png);background-size: cover;background-repeat: no-repeat;border-radius: 5px;margin: 0 auto;}
+
+#srr{font-size: 50px;position: absolute;top: 200px;left: -20%;opacity: 0;animation: srr 2s;animation-fill-mode: forwards;}
+@keyframes srr {
+    25%{color: aqua;opacity: 0.25;}
+    50%{color: rgb(195, 255, 0);opacity: 0.5;}
+    75%{color: rgb(197, 100, 68);opacity: 0.75;}
+    10%{color: rgb(61, 34, 135);opacity: 0.2;left: 50%;}
+}
+
+#section_2{margin-top: 20px;}
+#section_2 ul{list-style: none;display: flex;flex-wrap: wrap;}
+#section_2 ul li{width: 140px;height: 140px;border:1px solid;background-image: url(img01.png);background-size: cover;&:hover{background-color: lightblue;background-image: url();.list{display: block;}}}
+#section_2 ul li a{text-decoration: none;color: chocolate;&:hover{color:black;border-bottom: 2px dotted;padding-bottom: 5px;}}
+#section_2 ul li .list{text-align: center;margin-top: 50px;display: none;}
